@@ -3,7 +3,7 @@
 resources:
   pipelines:
     Bronze_Silver_ETL_Pipeline:
-      name: bronze_silver
+      name: bronze_silver_prod
       configuration:
         catalog_name: ${var.catalog}
       libraries:

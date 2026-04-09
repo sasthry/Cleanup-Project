@@ -1,7 +1,7 @@
 resources:
   jobs:
     EarthQuak_end_end_job:
-      name: EarthQuak_end_end_job
+      name: EarthQuak_end_end_job_prod
       tasks:
         - task_key: Ingestion_bronze
           notebook_task:
