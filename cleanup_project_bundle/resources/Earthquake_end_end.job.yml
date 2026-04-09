@@ -7,7 +7,7 @@ resources:
           notebook_task:
             notebook_path: ../src/Notebooks/ingestion_Bronze.ipynb
             base_parameters:
-              catalog_name: cleanup_cat
+              catalog_name: ${var.catalog}
             source: WORKSPACE
         - task_key: bronze_silver
           depends_on:
@@ -25,6 +25,6 @@ resources:
       queue:
         enabled: true
       parameters:
-        - name: ${var.catalog}
-          default: cleanup_cat
+        - name: catalog_name
+          default: ${var.catalog}
       performance_target: PERFORMANCE_OPTIMIZED
