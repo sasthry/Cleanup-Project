@@ -49,3 +49,6 @@ targets:
     permissions:
       - user_name: klssasthry001@gmail.com
         level: CAN_MANAGE
+
+      - group_name: earthquake_prod_writer
+        level: CAN_MANAGE
