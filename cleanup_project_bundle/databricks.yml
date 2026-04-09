@@ -15,7 +15,8 @@ variables:
     description: The schema to use
   warehouse_id:
     description: WarehouseID
-
+  spn_id:
+    description: spn_id
 targets:
   dev:
     # The default target uses 'mode: development' to create a development copy.
@@ -30,6 +31,7 @@ targets:
       catalog: cleanup_cat
       schema: dev
       warehouse_id: cae5c27042653272
+      spn_id: 32ad2953-a29f-4e7f-aaf5-635ff38c5ab2
     presets:
       artifacts_dynamic_version: true
   prod:
@@ -42,6 +44,8 @@ targets:
       catalog: cleanup_cat_prod
       schema: prod
       warehouse_id: cae5c27042653272
+      spn_id: 32ad2953-a29f-4e7f-aaf5-635ff38c5ab2
+
     permissions:
       - user_name: klssasthry001@gmail.com
         level: CAN_MANAGE
