@@ -1,0 +1,25 @@
+# The main pipeline for cleanup_project_bundle
+
+resources:
+  pipelines:
+    Bronze_Silver_ETL_Pipeline:
+      name: bronze_silver
+      configuration:
+        catalog_name: ${var.catalog}
+      libraries:
+        - glob:
+            include: ../src/DLT_Pipelines/Bronze_Silver/**
+      schema: silver
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: ${var.catalog}
+      serverless: true
+      root_path: ../src/DLT_Pipelines
+
+
+
+
+
+
